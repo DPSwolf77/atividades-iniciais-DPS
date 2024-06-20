@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Idade</title>
+</head>
+<body>
+    <h1>Calculadora de Idade</h1>
+    <label for="birthYear">Digite seu ano de nascimento:</label>
+    <input type="text" id="birthYear">
+    <button onclick="calculateAge()">Calcular Idade</button>
+    <p id="ageDisplay"></p>
+
+    <script>
+        function calculateAge() {
+            const birthYear = document.getElementById('birthYear').value;
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - birthYear;
+
+            if (!isNaN(age) && age >= 0) {
+                document.getElementById('ageDisplay').innerText = `Sua idade é ${age} anos.`;
+            } else {
+                document.getElementById('ageDisplay').innerText = 'Por favor, insira um ano de nascimento válido.';
+            }
+        }
+    </script>
+</body>
+</html>

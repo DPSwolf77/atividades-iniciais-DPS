@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação Personalizada</title>
+    <script>
+        function exibirSaudacao() {
+            const nome = document.getElementById('nome').value;
+            const mensagem = `Olá ${nome}, este é meu site`;
+            document.getElementById('mensagem').innerText = mensagem;
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo:</h1>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" name="nome">
+    <button onclick="exibirSaudacao()">Enviar</button>
+    <p id="mensagem"></p>
+</body>
+</html>

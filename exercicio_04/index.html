@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é maior de idade?
+    </head>
+    <body>
+        <h1>Verificação de Idade</h1>
+        <label for="age">Digite sua idade:</label>
+        <input type="text" id="age">
+        <button onclick="checkAge()">Verificar Idade</button>
+        <p id="ageMessage"></p>
+    
+        <script>
+            function checkAge() {
+                const age = parseInt(document.getElementById('age').value);
+                
+                if (!isNaN(age)) {
+                    if (age >= 18) {
+                        document.getElementById('ageMessage').innerText = 'Você é maior de idade.';
+                    } else {
+                        document.getElementById('ageMessage').innerText = 'Você é menor de idade.';
+                    }
+                } else {
+                    document.getElementById('ageMessage').innerText = 'Por favor, insira uma idade válida.';
+                }
+            }
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar e Esconder Elemento</title>
+</head>
+<body>
+    <h1 id="elemento">Quer esconder algo? hihi</h1>
+    <button onclick="esconder()">Esconder</button>
+    <button onclick="mostrar()">Mostrar</button>
+
+    <script>
+        function esconder() {
+            document.getElementById('elemento').style.display = 'none';
+        }
+
+        function mostrar() {
+            document.getElementById('elemento').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
