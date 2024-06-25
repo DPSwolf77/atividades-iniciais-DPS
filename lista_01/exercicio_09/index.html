@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relógio Maneiro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    #relogio {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Relógio Digital</h2>
+  
+  <div id="relogio">00:00:00</div>
+  
+  <script>
+    function atualizarRelogio() {
+      var agora = new Date();
+      var horas = agora.getHours().toString().padStart(2, '0');
+      var minutos = agora.getMinutes().toString().padStart(2, '0');
+      var segundos = agora.getSeconds().toString().padStart(2, '0');
+      var horaFormatada = horas + ':' + minutos + ':' + segundos;
+      document.getElementById('relogio').textContent = horaFormatada;
+    }
+    
+    // Atualiza o relógio a cada segundo
+    setInterval(atualizarRelogio, 1000);
+  </script>
+</body>
+</html>
