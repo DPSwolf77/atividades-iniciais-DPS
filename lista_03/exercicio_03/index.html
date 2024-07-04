@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de divs:</title>
+    <style>
+        .caixa {
+            background-color: #808080;
+        }
+        #primeira {
+            background-color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div id="primeira" class="caixa">
+        <p>Primeira div.</p>
+    </div>
+    <div id="segunda" class="caixa">
+        <p>Segunda div.</p>
+    </div>
+    <div id="terceira" class="caixa">
+        <p>Terceira div.</p>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('primeira').style.backgroundColor = '#FF0000';
+        }, 1000);
+
+        setTimeout(() => {
+            document.getElementById('segunda').style.backgroundColor = '#0000FF';
+        }, 2000);
+
+        setTimeout(() => {
+            document.getElementById('terceira').style.backgroundColor = '#00FF00';
+        }, 3000);
+    </script>
+</body>
+</html>

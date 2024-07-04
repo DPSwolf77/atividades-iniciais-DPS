@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editar Dados do Usuário</title>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+</style>
+</head>
+<body>
+
+<table id="user-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>João</td>
+            <td>joao@example.com</td>
+            <td><button onclick="editUser(1)">Editar</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maria</td>
+            <td>maria@example.com</td>
+            <td><button onclick="editUser(2)">Editar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<form id="edit-form" style="display: none;">
+    <label for="edit-id">ID:</label>
+    <input type="text" id="edit-id" name="edit-id" readonly><br><br>
+    <label for="edit-name">Nome:</label>
+    <input type="text" id="edit-name" name="edit-name"><br><br>
+    <label for="edit-email">Email:</label>
+    <input type="email" id="edit-email" name="edit-email"><br><br>
+    <button type="submit">Salvar</button>
+</form>
+
+<script>
+    function editUser(id) {
+        let userData = {
+            id: id,
+            name: "Nome do Usuário",
+            email: "email@example.com"
+        };
+
+        document.getElementById('edit-id').value = userData.id;
+        document.getElementById('edit-name').value = userData.name;
+        document.getElementById('edit-email').value = userData.email;
+
+        document.getElementById('edit-form').style.display = 'block';
+    }
+
+    document.getElementById('edit-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        
+        document.getElementById('edit-form').style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
