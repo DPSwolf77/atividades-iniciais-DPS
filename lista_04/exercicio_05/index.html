@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Área do Quadrado</title>
+    <script>
+        function areaQuadrado(base, altura) {
+            return base * altura;
+        }
+
+        function calcularArea() {
+            var base = parseFloat(document.getElementById('base').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+
+            var area = areaQuadrado(base, altura);
+
+            document.getElementById('resultado').innerText = `A área do quadrado é ${area.toFixed(3)}`;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calcular Área do Quadrado</h2>
+    
+    <label for="base">Base do quadrado:</label>
+    <input type="number" id="base" name="base"><br><br>
+    
+    <label for="altura">Altura do quadrado:</label>
+    <input type="number" id="altura" name="altura"><br><br>
+    
+    <button type="button" onclick="calcularArea()">Calcular Área</button>
+    
+    <p id="resultado"></p>
+</body>
+</html>

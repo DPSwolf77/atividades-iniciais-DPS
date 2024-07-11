@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Área de Retângulo</title>
+    <script>
+        function areaRetangulo() {
+            var base = parseFloat(document.getElementById('base').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+            var area = base * altura;
+            document.getElementById('resultado').innerHTML = "A área do retângulo é " + area.toFixed(3);
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Área de Retângulo</h2>
+    <form>
+        <label for="base">Base:</label>
+        <input type="number" id="base" name="base" required><br><br>
+
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" required><br><br>
+
+        <button type="button" onclick="areaRetangulo()">Calcular Área</button>
+    </form>
+
+    <div id="resultado"></div>
+</body>
+</html>

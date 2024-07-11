@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperatura</title>
+    <script>
+        function converteFahrenheitParaCelsius() {
+            var fahrenheit = parseFloat(document.getElementById('fahrenheit').value);
+            var celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById('resultado').innerHTML = fahrenheit + "F eh equivalente a " + celsius.toFixed(2) + "C";
+        }
+    </script>
+</head>
+<body>
+    <h2>Conversor de Temperatura</h2>
+    <label for="fahrenheit">Temperatura em Fahrenheit:</label>
+    <input type="number" id="fahrenheit" name="fahrenheit" required>
+    <button type="button" onclick="converteFahrenheitParaCelsius()">Converter</button>
+
+    <div id="resultado"></div>
+</body>
+</html>

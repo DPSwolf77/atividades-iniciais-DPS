@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Troca de Valores</title>
+    <script>
+        function swap() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            
+            var mensagemAntes = `Valores antes da troca: A = ${num1}, B = ${num2}\n`;
+            document.getElementById('resultado').innerText += mensagemAntes;
+            
+            var temp = num1;
+            num1 = num2;
+            num2 = temp;
+            
+            var mensagemDepois = `Valores após a troca: A = ${num1}, B = ${num2}\n`;
+            document.getElementById('resultado').innerText += mensagemDepois;
+        }
+    </script>
+</head>
+<body>
+    <h2>Troca de Valores</h2>
+    
+    <label for="num1">Número A:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    
+    <label for="num2">Número B:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+    
+    <button type="button" onclick="swap()">Trocar Valores</button>
+    
+    <p id="resultado"></p>
+</body>
+</html>
